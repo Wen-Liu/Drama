@@ -6,6 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".DramaInfoActivity">
 
+    <ImageView
+        android:id="@+id/iv_info_drama_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/tv_info_drama_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_launcher" />
 
+    <TextView
+        android:id="@+id/tv_info_drama_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Green_400"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/item_text_size"
+        app:layout_constraintBottom_toTopOf="@id/tv_info_drama_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_info_drama_image"
+        tools:text="tv_drama_name" />
+
+    <TextView
+        android:id="@+id/tv_info_drama_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Red_400"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/item_text_size"
+        app:layout_constraintBottom_toTopOf="@id/tv_info_drama_create_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_name"
+        tools:text="tv_drama_rating" />
+
+    <TextView
+        android:id="@+id/tv_info_drama_create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Yellow_400"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/item_text_size"
+        app:layout_constraintBottom_toTopOf="@id/tv_info_drama_total_views"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_rating"
+        tools:text="tv_drama_create_time" />
+
+    <TextView
+        android:id="@+id/tv_info_drama_total_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Red_400"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/item_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_create_time"
+        tools:text="tv_info_drama_total_views" />
 
 </android.support.constraint.ConstraintLayout>

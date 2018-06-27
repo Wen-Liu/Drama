@@ -3,7 +3,9 @@ package com.wenliu.chocolabsexam.object;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Drama {
+import java.io.Serializable;
+
+public class Drama implements Serializable {
 
     @SerializedName("drama_id")
     @Expose
