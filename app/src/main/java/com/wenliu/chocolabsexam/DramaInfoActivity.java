@@ -1,16 +1,16 @@
 package com.wenliu.chocolabsexam;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.wenliu.chocolabsexam.base.BaseActivity;
 import com.wenliu.chocolabsexam.object.Drama;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DramaInfoActivity extends AppCompatActivity {
+public class DramaInfoActivity extends BaseActivity {
 
     @BindView(R.id.iv_info_drama_image)
     ImageView mIvInfoDramaImage;
@@ -38,7 +38,7 @@ public class DramaInfoActivity extends AppCompatActivity {
 
     private void initView() {
         Bundle bundle = this.getIntent().getExtras();
-        mDrama = (Drama) bundle.getSerializable(Constants.TAG_BUNDLE_DRAMA);
+        mDrama = (Drama) bundle.getSerializable(Constants.BUNDLE_DRAMA);
 
         mImageManager.loadImageUrl(mDrama.getThumb(), mIvInfoDramaImage);
         mTvInfoDramaName.setText(mDrama.getName());

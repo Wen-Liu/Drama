@@ -1,4 +1,4 @@
-package com.wenliu.chocolabsexam;
+package com.wenliu.chocolabsexam.mainpage;
 
 import com.wenliu.chocolabsexam.base.BasePresenter;
 import com.wenliu.chocolabsexam.base.BaseView;
@@ -19,12 +19,14 @@ public interface MainContract {
 
     interface Presenter extends BasePresenter {
 
-        void getDramas();
+        void checkInternet();
+
+        void getDramasInternet();
+
+        void getDramasLocal();
 
         void transToDetail(Drama drama);
 
         ArrayList<Drama> searchData(String input);
     }
-
-
 }
