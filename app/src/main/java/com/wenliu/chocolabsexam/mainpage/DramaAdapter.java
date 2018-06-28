@@ -3,6 +3,7 @@ package com.wenliu.chocolabsexam.mainpage;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
+import android.support.constraint.Constraints;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.wenliu.chocolabsexam.Constants;
-import com.wenliu.chocolabsexam.ImageManager;
+import com.wenliu.chocolabsexam.image.ImageManager;
 import com.wenliu.chocolabsexam.R;
 import com.wenliu.chocolabsexam.object.Drama;
 
@@ -48,6 +49,9 @@ public class DramaAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         mImageManager.loadImageUrl(mDramas.get(position).getThumb(), ((DramaViewHolder) holder).getIvDramaImage());
+
+        ((DramaViewHolder) holder).getIvDramaImage().getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+
         ((DramaViewHolder) holder).getTvDramaName().setText(mDramas.get(position).getName());
         String[] splitCreateTime = mDramas.get(position).getCreatedAt().split("T");
         ((DramaViewHolder) holder).getTvDramaCreateTime().setText(splitCreateTime[0]);

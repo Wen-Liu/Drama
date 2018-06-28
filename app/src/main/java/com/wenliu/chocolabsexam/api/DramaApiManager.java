@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.wenliu.chocolabsexam.Constants;
 import com.wenliu.chocolabsexam.api.callback.GetDramaListCallback;
+import com.wenliu.chocolabsexam.api.retrofit.ChocolabsClient;
 import com.wenliu.chocolabsexam.object.Drama;
 import com.wenliu.chocolabsexam.object.Result;
 

@@ -14,6 +14,9 @@ public interface DramaDao {
     @Query("SELECT * FROM  `drama` ")
     List<DramaEntry> getAll();
 
+    @Query("SELECT * FROM  `drama` where dramaId = :id")
+    DramaEntry getDramaById(String id);
+
 //    @Query("SELECT * FROM drama where price >= :price")
 //    public List<DramaDatabase> queryByPrice(int price);
 

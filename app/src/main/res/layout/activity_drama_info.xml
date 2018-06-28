@@ -22,47 +22,78 @@
         android:id="@+id/tv_info_drama_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/Green_400"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/item_text_size"
-        app:layout_constraintBottom_toTopOf="@id/tv_info_drama_rating"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_info_drama_image"
-        tools:text="tv_drama_name" />
-
-    <TextView
-        android:id="@+id/tv_info_drama_rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/Red_400"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/item_text_size"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/Grey_800"
+        android:textSize="@dimen/item_info_title_text_size"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tv_info_drama_create_time"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_name"
-        tools:text="tv_drama_rating" />
+        app:layout_constraintTop_toBottomOf="@id/iv_info_drama_image"
+        tools:text="tv_drama_name" />'
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_info_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_drama_name">
+
+        <ImageView
+            android:id="@+id/iv_ic_favorite"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_favorite" />
+
+        <TextView
+            android:id="@+id/tv_info_drama_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Grey_800"
+            android:textSize="@dimen/item_info_text_size"
+            tools:text="tv_drama_rating" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_info_drama_create_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/Yellow_400"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/item_text_size"
-        app:layout_constraintBottom_toTopOf="@id/tv_info_drama_total_views"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/Grey_800"
+        android:textSize="@dimen/item_info_text_size"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_rating"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_name"
         tools:text="tv_drama_create_time" />
 
-    <TextView
-        android:id="@+id/tv_info_drama_total_views"
+    <LinearLayout
+        android:id="@+id/LinearLayout_info_views"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/Red_400"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/item_text_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_create_time"
-        tools:text="tv_info_drama_total_views" />
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_drama_name">
+
+        <ImageView
+            android:id="@+id/iv_ic_views"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_visibility" />
+
+        <TextView
+            android:id="@+id/tv_info_drama_total_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Grey_800"
+            android:textSize="@dimen/item_info_text_size"
+            tools:text="tv_info_drama_total_views" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
