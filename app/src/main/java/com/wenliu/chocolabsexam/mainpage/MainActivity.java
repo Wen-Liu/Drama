@@ -91,11 +91,13 @@ public class MainActivity extends BaseActivity implements MainContract.View {
                 String searchInput = mEtSearchInput.getText().toString().trim();
 
                 if (searchInput.length() > 0) {
+                    Log.d(TAG, "afterTextChanged: > 0 ");
                     mQueryDramas = new ArrayList<>(mPresenter.searchData(searchInput));
                     mDramaAdapter.updateData(mQueryDramas);
                     SearchRecord.getInstance().setSearch(searchInput);
                     mBtnClear.setVisibility(View.VISIBLE);
                 } else {
+                    Log.d(TAG, "afterTextChanged: =0 ");
                     mDramaAdapter.updateData(mDramas);
                     mBtnClear.setVisibility(View.GONE);
                     SearchRecord.getInstance().clearSearch();
@@ -149,8 +151,6 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
             case R.id.btn_clear:
                 mEtSearchInput.setText("");
-                SearchRecord.getInstance().clearSearch();
-
                 break;
         }
     }

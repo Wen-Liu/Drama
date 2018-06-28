@@ -30,7 +30,8 @@ public class SearchRecord {
     }
 
     public void clearSearch() {
-        mSearchData.edit().remove(Constants.SEARCH_RECORD);
+        Log.d("wen-", "clearSearch: ");
+        mSearchData.edit().remove(Constants.SEARCH_RECORD).commit();
     }
 
     public boolean haveSearchRecord() {
