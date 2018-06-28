@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.wenliu.chocolabsexam.Constants;
 import com.wenliu.chocolabsexam.api.callback.GetDramaListCallback;
+import com.wenliu.chocolabsexam.api.retrofit.ChocolabsClient;
 import com.wenliu.chocolabsexam.object.Drama;
 import com.wenliu.chocolabsexam.object.Result;
 
@@ -12,8 +13,6 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DramaApiManager {
     private static final String TAG = Constants.TAG_DRAMA_API_MANAGER;

@@ -1,4 +1,4 @@
-package com.wenliu.chocolabsexam.api;
+package com.wenliu.chocolabsexam.api.retrofit;
 
 import com.wenliu.chocolabsexam.Constants;
 import com.wenliu.chocolabsexam.object.Drama;

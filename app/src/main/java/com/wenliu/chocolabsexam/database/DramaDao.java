@@ -6,8 +6,6 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 
-import com.wenliu.chocolabsexam.object.Drama;
-
 import java.util.List;
 
 @Dao
@@ -15,6 +13,9 @@ public interface DramaDao {
 
     @Query("SELECT * FROM  `drama` ")
     List<DramaEntry> getAll();
+
+    @Query("SELECT * FROM  `drama` where dramaId = :id")
+    DramaEntry getDramaById(String id);
 
 //    @Query("SELECT * FROM drama where price >= :price")
 //    public List<DramaDatabase> queryByPrice(int price);

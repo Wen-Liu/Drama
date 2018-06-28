@@ -1,4 +1,4 @@
-package com.wenliu.chocolabsexam;
+package com.wenliu.chocolabsexam.image;
 
 import android.content.Context;
 import android.widget.ImageView;

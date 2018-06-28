@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="4dp"
     android:background="@color/White"
     android:paddingBottom="6dp"
     android:elevation="8dp">
@@ -14,9 +13,9 @@
     <ImageView
         android:id="@+id/iv_drama_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="240dp"
         android:background="@color/White"
-        android:scaleType="fitCenter"
+        android:scaleType="fitXY"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@id/tv_drama_name"
         app:layout_constraintEnd_toEndOf="parent"

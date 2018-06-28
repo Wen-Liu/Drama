@@ -7,6 +7,8 @@ public class Constants {
     public static final String TAG_MAIN_ACTIVITY = "wen-MainActivity";
     public static final String TAG_MAIN_PRESENTER = "wen-MainPresenter";
     public static final String TAG_MAIN_ADAPTER = "wen-MainAdapter";
+    public static final String TAG_DRAMA_INFO_ACTIVITY = "wen-DramaInfoActivity";
+
 
     public static final String TAG_DRAMA_API_MANAGER = "wen-DramaApiManager";
     public static final String TAG_STORE_DATA_TASK = "wen-StoreDataTask";

@@ -18,29 +18,28 @@
             android:name=".mainpage.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-            <intent-filter>
-                <data
-                    android:scheme="http"
-                    android:host="www.example.com"
-                    />
-                <action
-                    android:name="android.intent.action.VIEW" />
-                <category
-                    android:name="android.intent.category.DEFAULT" />
-                <category
-                    android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
 
         <activity
             android:name=".DramaInfoActivity"
             android:screenOrientation="portrait">
+
+            <intent-filter>
+                <data
+                    android:host="www.example.com"
+                    android:scheme="http" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
         </activity>
 
         <activity android:name=".base.BaseActivity"></activity>
