@@ -6,8 +6,6 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 
-import com.wenliu.chocolabsexam.object.Drama;
-
 import java.util.List;
 
 @Dao

@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.wenliu.chocolabsexam.Constants;
 import com.wenliu.chocolabsexam.ImageManager;
 import com.wenliu.chocolabsexam.R;
-import com.wenliu.chocolabsexam.mainpage.MainContract;
 import com.wenliu.chocolabsexam.object.Drama;
 
 import java.util.ArrayList;
