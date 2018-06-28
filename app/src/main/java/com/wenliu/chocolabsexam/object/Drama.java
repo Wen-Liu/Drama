@@ -2,6 +2,7 @@ package com.wenliu.chocolabsexam.object;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.wenliu.chocolabsexam.database.DramaEntry;
 
 import java.io.Serializable;
 
@@ -25,6 +26,15 @@ public class Drama implements Serializable {
     @SerializedName("rating")
     @Expose
     private Double rating;
+
+    public Drama(DramaEntry dramaEntry) {
+        this.dramaId = dramaEntry.getDramaId();
+        this.name = dramaEntry.getName();
+        this.totalViews = dramaEntry.getTotalViews();
+        this.createdAt = dramaEntry.getCreatedAt();
+        this.thumb = dramaEntry.getThumb();
+        this.rating = dramaEntry.getRating();
+    }
 
     public Integer getDramaId() {
         return dramaId;
